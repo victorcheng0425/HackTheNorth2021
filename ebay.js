@@ -29,17 +29,20 @@ let scrape = async(url) => {
         // console.log(titles[0].innerText);
         // console.log(titles.length);
         console.log(titles);
-        let price = document.getElementsByClassName('s-item__price');
+        //let price = document.getElementsByClassName('s-item__price');
+        let price = document.getElementsByClassName('s-item__details clearfix');
         let image = document.getElementsByClassName('s-item__image-img');
-        //console.log("price" + price);
+        let link = document.getElementsByClassName('s-item__link');
+        //console.log("price" + price); //let price = document.getElementsByClassName('s-item__details clearfix');
         for (let i = 1; i < titles.length; i++) { //i-1 for price because there an extra element on titles
             console.log(titles[i].innerText);
             console.log(price[i-1].innerText);
             articles.push(
                 {
                     'title': titles[i].innerText,
-                    'price': price[i-1].innerText,
-                    'image': image[i-1].src
+                    'price': price[i-1].getElementsByClassName('s-item__price')[0].innerText,
+                    'image': image[i-1].src,
+                    'link': link[i].href,
                 })
         }
         return articles
