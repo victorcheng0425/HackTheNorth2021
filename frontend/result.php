@@ -9,7 +9,7 @@ $result_folder = date_timestamp_get($date);
 $result_path = "results/" . $result_folder;
 mkdir($result_path);
 
-
+$search_key = str_replace(" ", "+", $search_key);
 // call search method
 $url = 'http://localhost:3000/search/' . $search_key;
 // echo $url;
@@ -27,4 +27,4 @@ $_SESSION['input'] = $input;
 // echo $response;
 // echo $result[1]['title'];
 
-header("Location: index.php?result_folder=$result_folder&&input=$response");
+header("Location: index.php?hascontent=1");

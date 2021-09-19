@@ -70,5 +70,17 @@ a:hover{
 }
 
 
+.page-nav ul{
+    display:flex;
+    justify-content: center;
+}
 
+.page-nav ul li{
+    display: list-item;
+}
+
+.pageNum {
+    text-align: center;
+    margin-bottom: 3%;
+}
 

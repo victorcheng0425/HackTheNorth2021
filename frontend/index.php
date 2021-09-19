@@ -59,7 +59,7 @@ session_start();
             <div class="col"></div>
             <div class="col-md-10">
                 <?php
-                if($input != null){
+                if($input != null && isset($_GET['hascontent'])){
                     for($n=6*($pageNum-1); $n < 6*$pageNum && $n < count($input); $n++):
                         $product = $input[$n];
 
@@ -74,7 +74,7 @@ session_start();
                         </div>
 
                         <div class="col-md-4 name_col">
-                            <a href= "https://www.google.com" >
+                            <a href= "<?=$product['link'];?>" target="_blank">
                                 <span> <?=$product['title']?> </span>
                             </a>
                         </div>
@@ -92,7 +92,9 @@ session_start();
             <div class="col"></div>
 
         </div>
-
+        <div class="row">
+            <div class="pageNum"><?php echo $pageNum ?></div>
+        </div>
         <div class="row">
             <div class="col"></div>
             <div class="col-md-3 page-nav">
@@ -104,9 +106,9 @@ session_start();
                         </a>
                         </li>
                         <?php
-                            if($input != null) {
+                            if($input != null && isset($_GET['hascontent'])){
                                 for ($n = 1; $n <= ceil(count($input) / 6.0); $n++) {
-                                    echo "<li class=\"page-item\"><a class=\"page-link\" href=\"index.php?page=$n\">$n</a></li>";
+                                    echo "<li class=\"page-item\"><a class=\"page-link\" href=\"index.php?hascontent=1&page=$n\">$n</a></li>";
                                 }
                             }
                         ?>
@@ -122,6 +124,7 @@ session_start();
                 </nav>
             </div>
             <div class="col"></div>
+
         </div>
 
     </div>
