@@ -1,4 +1,4 @@
-# Price Checker
+# HackTheNorth2021
 
 
 ## Setup/Installations for JavaScript Web Scraping
