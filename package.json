@@ -1,0 +1,33 @@
+{
+  "name": "hackthenorth2021",
+  "version": "1.0.0",
+  "description": "",
+  "main": "ebay.js",
+  "engines": {
+    "node": "^7.10.0"
+  },
+  "type": "commonjs",
+  "dependencies": {
+    "dom-parser": "^0.1.6",
+    "jsdom": "^17.0.0",
+    "puppeteer": "^10.2.0",
+    "xhr2": "^0.2.1",
+    "xmldom": "^0.6.0",
+    "xmlhttprequest": "^1.8.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/victorcheng0425/HackTheNorth2021.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/victorcheng0425/HackTheNorth2021/issues"
+  },
+  "homepage": "https://github.com/victorcheng0425/HackTheNorth2021#readme"
+}
