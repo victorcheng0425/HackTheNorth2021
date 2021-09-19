@@ -2,8 +2,8 @@
 # ![image](https://user-images.githubusercontent.com/53034685/133922856-c6789bae-af58-4807-bdc1-fb212abbef2a.png)
 
 ## Dependencies
-* https://nodejs.org/en/
-* https://www.php.net/
+* [Node v16] (https://nodejs.org/)
+* [PHP v7] (https://www.php.net/)
 
 ## Setup/Installations
 Here are some steps to use web scraper in JavaScript.
