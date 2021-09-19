@@ -38,10 +38,6 @@ session_start();
                                     <div id="message" class="form-text">We'll search all the website for you.</div>
                             </div>
                         </div>
-        <!--                <div class="mb-3 form-check">-->
-        <!--                    <input type="checkbox" class="form-check-input" id="exampleCheck1">-->
-        <!--                    <label class="form-check-label" for="exampleCheck1">Check me out</label>-->
-        <!--                </div>-->
                         <div class="col-md-3">
                             <button type="submit" class="btn btn-primary">Search</button>
                         </div>
