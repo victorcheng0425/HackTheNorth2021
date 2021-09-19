@@ -1,0 +1,74 @@
+
+html {
+    height: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+body{
+    /* background-color: #eae8e8; */
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    max-width: 100%;
+    background-image: url('../image/Background.jpg');
+    /* background-size: cover; */
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+a:hover{
+    color: rgb(238, 52, 52);
+}
+
+.title_image {
+    margin-bottom: 5%;
+
+    border-radius: 30px;
+}
+
+.product_entry{
+    /* background-color: rgba(255,255,255,0.5); */
+    background-color: rgba(230, 230, 230,0.5);
+    margin-bottom: 5%;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 10px;
+}
+
+/* .product_entry:hover{
+    background-color: rgba(156, 167, 163, 0.5);
+} */
+/* .image_col:hover{
+    cursor:grab;
+} */
+
+/* .name_col:hover{
+    color: rgb(238, 52, 52);
+    cursor:grab;
+} */
+
+.name_col {
+    color: rgb(0, 0, 0);
+}
+
+.price_col{
+    color: rgb(238, 52, 52);
+    font-size: x-large;
+    text-align: center;
+    /* cursor:grab; */
+}
+
+.page{
+    text-align: center;
+}
+
+
+
+
