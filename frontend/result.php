@@ -10,7 +10,7 @@ $result_path = "results/" . $result_folder;
 mkdir($result_path);
 
 
-// TODo call search method
+// call search method
 $url = 'http://localhost:3000/search/' . $search_key;
 // echo $url;
 // $ch = curl_init();

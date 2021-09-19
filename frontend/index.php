@@ -29,7 +29,7 @@ session_start();
         <div class="row">
             <div class="col"></div>
             <div class="col-md-8">
-                <form action="result.php" method="post" id = "search_form"> <!--  TODO  -->
+                <form action="result.php" method="post" id = "search_form">
                     <div class="row">
                         <div class="col-md-9">
                             <div class="mb-3">
