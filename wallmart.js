@@ -61,7 +61,7 @@ let wallmart_scraper = async(keyword) => {
         return products
     });
     console.log("end wallmart scraping.");
-    //await browser.close();
+    await browser.close();
     return productNames;
 
 };
