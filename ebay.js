@@ -1,7 +1,7 @@
 function praseToPrice(string) {
     //console.log(string);
     string = string.split(' ');
-    console.log(string);
+    //console.log(string);
     // console.log(typeof(string));
     for(let i =0; i < string.length; i++) {
         if(string[i][0] === '$') {
@@ -70,14 +70,14 @@ async function scrape(url) {
     //let scores = document.getElementsByClassName('score');
     //console.log({srcTxt});
 };
-scrape(ebay_website+searchItem).then((value) => {
-    for(let x = 0; x < value.length; x++) {
-        value[x].price = praseToPrice(value[x].price);
-    }
-    console.log(value);
-}).catch((error) => {
-    console.log("error");
-});
+// scrape(ebay_website+searchItem).then((value) => {
+//     for(let x = 0; x < value.length; x++) {
+//         value[x].price = praseToPrice(value[x].price);
+//     }
+//     console.log(value);
+// }).catch((error) => {
+//     console.log("error");
+// });
 module.exports = {
     praseToPrice,
     scrape

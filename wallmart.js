@@ -2,7 +2,7 @@ const puppeteer = require('puppeteer')
 function praseToPrice(string) {
     //console.log(string);
     string = string.split(' ');
-    console.log(string);
+    //console.log(string);
     // console.log(typeof(string));
     for(let i =0; i < string.length; i++) {
         if(string[i][0] === '$') {
@@ -68,7 +68,7 @@ let wallmart_scraper = async(keyword) => {
 
 };
 
-wallmart_scraper('oled tv').then((value) => {
+wallmart_scraper('apple+watch').then((value) => {
     for(let x = 0; x < value.length; x++) {
         value[x].price = praseToPrice(value[x].price);
     }
