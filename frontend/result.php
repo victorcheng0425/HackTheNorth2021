@@ -4,6 +4,9 @@ session_unset();
 session_destroy();
 session_start();
 $search_key = $_POST['search_key'];
+if($search_key == ""){
+    header("Location: index.php");
+}
 $date = date_create();
 $result_folder = date_timestamp_get($date);
 $result_path = "results/" . $result_folder;

@@ -20,7 +20,7 @@ let wallmart_scraper = async(keyword) => {
     const url='https://www.walmart.ca/search?q='+keyword;
     const browser = await puppeteer.launch({
        // executablePath: '/usr/local/bin/chromium',
-       //  headless: true
+       //  headless: false
     })
     const page = await browser.newPage();
     //uncomment if you want to debug!
@@ -66,13 +66,13 @@ let wallmart_scraper = async(keyword) => {
 
 };
 
-wallmart_scraper('oled tv').then((value) => {
-    // for(let x = 0; x < value.length; x++) {
-    //     value[x].price = praseToPrice(value[x].price);
-    // }
-    console.log(value);
-    }
-);
+// wallmart_scraper('oled tv').then((value) => {
+//     // for(let x = 0; x < value.length; x++) {
+//     //     value[x].price = praseToPrice(value[x].price);
+//     // }
+//     console.log(value);
+//     }
+// );
 
 
 module.exports = {
