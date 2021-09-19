@@ -48,27 +48,57 @@ session_start();
             </footer>
         </div>
 
-        <div class="row">
+        <form action="result.php" method="post" id = "search_form">
+        <div class="row radio">
+            <div class="col-md-3"></div>
+            <div class="col-md-2">
+
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="sortRadio" value="el" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                        None
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="sortRadio" value = "as" id="flexRadioDefault2" >
+                    <label class="form-check-label" for="flexRadioDefault2">
+                        Low-High
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="sortRadio" value = "de" id="flexRadioDefault3">
+                    <label class="form-check-label" for="flexRadioDefault3">
+                        High-low
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3"></div>
+
+        <div class="row search_row">
             <div class="col"></div>
             <div class="col-md-8">
-                <form action="result.php" method="post" id = "search_form">
-                    <div class="row">
-                        <div class="col-md-9">
-                            <div class="mb-3">
 
-    <!--                                <label for="searchInput" class="form-label">Item Name</label>-->
+                    <div class="row">
+                        <div class="col"></div>
+                        <div class="col-md-8">
+                            <div class="mb-4">
                                     <input name="search_key" type="text" class="form-control" id="searchInput" aria-describedby="message" placeholder="Item Name">
                                     <div id="message" class="form-text">We'll search all the website for you.</div>
                             </div>
                         </div>
-                        <div class="col-md-3">
+                        <div class="col-md-2">
                             <button type="submit" class="btn btn-primary">Search</button>
                         </div>
                     </div>
-                </form>
             </div>
             <div class="col"></div>
         </div>
+        </form>
         <?php
             $pageNum = 0;
             if(!isset($_GET['page'])) {

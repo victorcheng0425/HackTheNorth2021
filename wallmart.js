@@ -68,13 +68,13 @@ let wallmart_scraper = async(keyword) => {
 
 };
 
-wallmart_scraper('apple+watch').then((value) => {
-    for(let x = 0; x < value.length; x++) {
-        value[x].price = praseToPrice(value[x].price);
-    }
-    console.log(value);
-    }
-);
+// wallmart_scraper('apple+watch').then((value) => {
+//     for(let x = 0; x < value.length; x++) {
+//         value[x].price = praseToPrice(value[x].price);
+//     }
+//     console.log(value);
+//     }
+// );
 
 
 module.exports = {
