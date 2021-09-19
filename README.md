@@ -1,7 +1,7 @@
 # Price Checker
 
 
-## setup/installation for javascript scrapers
+## Setup/Installations for JavaScript Web Scraping
 Here are some steps to use web scraper in JavaScript.
 
 Step1: npm install puppeteer
