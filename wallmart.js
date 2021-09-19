@@ -1,5 +1,15 @@
 const puppeteer = require('puppeteer')
-
+function praseToPrice(string) {
+    //console.log(string);
+    string = string.split(' ');
+    //console.log(string);
+    for(let i =0; i < string.length; i++) {
+        if(string[i][0] === '$') {
+            //console.log(string[i]);
+            return parseFloat(string[i].slice(1));
+        }
+    }
+}
 /*input:
         keyword:str
 return:
@@ -32,8 +42,9 @@ let wallmart_scraper = async(keyword) => {
         product_items.forEach(element => {
             let title = element.getElementsByTagName("p")[0];
             let price = element.querySelector("div[data-automation='price-section-wrapper']");
-            let price_string = price.textContent.replace('$','');
-            let price_float = parseFloat(price_string);
+            // let price_string = price.textContent.replace('$','');
+            // let price_float = parseFloat(price_string);
+            // console.log(price.textContent);
             let image = element.getElementsByTagName("img")[0];
             let url = "https://www.walmart.ca/" +
                 element.getElementsByTagName("a")[0].getAttribute("href");
@@ -41,7 +52,7 @@ let wallmart_scraper = async(keyword) => {
             products.push(
                 {
                     'title': title.textContent,
-                    'price': price_float,
+                    'price': price.textContent,
                     'image': image.getAttribute("src"),
                     'link': url,
                 }
@@ -50,16 +61,21 @@ let wallmart_scraper = async(keyword) => {
         return products
     });
     console.log("end wallmart scraping.");
-    await browser.close();
+    //await browser.close();
     return productNames;
 
 };
 
-// wallmart_scraper('T-Shirt').then((value => {
-//         console.log(value);
-//     }
-// ));
+wallmart_scraper('oled tv').then((value) => {
+    // for(let x = 0; x < value.length; x++) {
+    //     value[x].price = praseToPrice(value[x].price);
+    // }
+    console.log(value);
+    }
+);
+
 
 module.exports = {
+    praseToPrice,
     wallmart_scraper
 }
