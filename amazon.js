@@ -31,15 +31,30 @@ async function amazon_scraper(keyword) {
         let temp = [];
         console.log("test");
         let product_items = document.querySelectorAll("div[class='a-section a-spacing-medium a-text-center']");
-        product_items.forEach(element => {
+        product_items.forEach((element, i= 2) => {
             let href = element.getElementsByTagName("a")[0].getAttribute("href");
             let image = element.getElementsByTagName("img")[0].getAttribute("src");
-            // let title = element.querySelector("span[class='a-size-base-plus a-color-base a-text-normal']");
-            // let price = element.querySelector("span[class='a-offscreen']");
+            let price = document.getElementsByClassName("a-offscreen")[i++];
+            // let title = document.getElementsByClassName("a-size-base-plus a-color-base a-text-normal")[0];
+            let title = element.getElementsByTagName("span")[2];
+            //TODO: Fix the case where there is missing price (need to shift)
+            //TODO: Add title
+
+            if(price!=null){
+                // price = price.textContent.replace('.','');
+                console.log("price :", price.textContent)
+            } else{
+                price = "";
+            }
+            if(title!=null){
+                title = title.textContent;
+            } else {
+                title = "";
+            }
             temp.push(
                 {
-                    // 'title': title.textContent,
-                    // 'price': price,
+                    'title': title,
+                    'price': price.innerText,
                     'image': image,
                     'link': 'https://www.amazon.ca/' + href
                 });
