@@ -21,7 +21,7 @@ let wallmart_scraper = async(keyword) => {
     /* 1. Setup and configurations*/
     const url='https://www.walmart.ca/search?q='+keyword;
     const browser = await puppeteer.launch({
-       // executablePath: '/usr/local/bin/chromium',
+       // executablePath: '/usr/local/bin/chromium'',
        headless: false
     })
     const page = await browser.newPage();
