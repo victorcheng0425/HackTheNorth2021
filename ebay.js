@@ -68,14 +68,14 @@ async function scrape(url) {
     //let scores = document.getElementsByClassName('score');
     //console.log({srcTxt});
 };
-// scrape(ebay_website+searchItem).then((value) => {
-//     for(let x = 0; x < value.length; x++) {
-//         value[x].price = praseToPrice(value[x].price);
-//     }
-//     console.log(value);
-// }).catch((error) => {
-//     console.log("error");
-// });
+scrape(ebay_website+searchItem).then((value) => {
+    for(let x = 0; x < value.length; x++) {
+        value[x].price = praseToPrice(value[x].price);
+    }
+    console.log(value);
+}).catch((error) => {
+    console.log("error");
+});
 module.exports = {
     praseToPrice,
     scrape
