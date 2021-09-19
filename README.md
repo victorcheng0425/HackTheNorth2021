@@ -1,15 +1,15 @@
-# HackTheNorth2021
+# Price Checker
 
 
 ## setup/installation for javascript scrapers
-Here are some steps to use web scrape in javascript.
+Here are some steps to use web scraper in JavaScript.
 
 Step1: npm install puppeteer
 
 Step2: brew install chromium (for Mac)
-or apt-get install chromium-browser (for linux)
+or apt-get install chromium-browser (for Linux)
 
-Step3: inside of javascript scraping file, we can set up configuraiton like this.
+Step3: Inside of JavaScript scraping file, we can set up a configuration like this:
 const browser = await puppeteer.launch({
         executablePath: '/usr/local/bin/chromium',
         headless: false

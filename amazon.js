@@ -1,5 +1,16 @@
+function praseToPrice(string) {
+    //console.log(string);
+    string = string.split(' ');
+    //console.log(string);
+    for(let i =0; i < string.length; i++) {
+        if(string[i][0] === '$') {
+            //console.log(string[i]);
+            return parseFloat(string[i].slice(1));
+        }
+    }
+}
+
 const puppeteer = require('puppeteer');
-const {praseToPrice} = require("./ebay");
 // const StealthPlugin = require('puppeteer-extra-plugin-stealth');
 // puppeteer.use(StealthPlugin());
 
@@ -53,7 +64,11 @@ let amazon_scraper = async(keyword) => {
     await browser.close();
     return result;
 }
+amazon_scraper('watch').then((value) => {
+    console.log(value);
+});
 
 module.exports = {
-    amazon_scraper
+    amazon_scraper,
+    praseToPrice
 }
