@@ -2,10 +2,12 @@ const puppeteer = require('puppeteer')
 function praseToPrice(string) {
     //console.log(string);
     string = string.split(' ');
-    //console.log(string);
+    console.log(string);
+    // console.log(typeof(string));
     for(let i =0; i < string.length; i++) {
         if(string[i][0] === '$') {
             //console.log(string[i]);
+            string[i] = string[i].replace(/[,]/g, "");
             return parseFloat(string[i].slice(1));
         }
     }
@@ -20,7 +22,7 @@ let wallmart_scraper = async(keyword) => {
     const url='https://www.walmart.ca/search?q='+keyword;
     const browser = await puppeteer.launch({
        // executablePath: '/usr/local/bin/chromium',
-       //  headless: true
+       headless: false
     })
     const page = await browser.newPage();
     //uncomment if you want to debug!
@@ -67,9 +69,9 @@ let wallmart_scraper = async(keyword) => {
 };
 
 wallmart_scraper('oled tv').then((value) => {
-    // for(let x = 0; x < value.length; x++) {
-    //     value[x].price = praseToPrice(value[x].price);
-    // }
+    for(let x = 0; x < value.length; x++) {
+        value[x].price = praseToPrice(value[x].price);
+    }
     console.log(value);
     }
 );
