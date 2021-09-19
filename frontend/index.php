@@ -33,6 +33,7 @@ session_start();
                     <div class="row">
                         <div class="col-md-9">
                             <div class="mb-3">
+
     <!--                                <label for="searchInput" class="form-label">Item Name</label>-->
                                     <input name="search_key" type="text" class="form-control" id="searchInput" aria-describedby="message" placeholder="Item Name">
                                     <div id="message" class="form-text">We'll search all the website for you.</div>
