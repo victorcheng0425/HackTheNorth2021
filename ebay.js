@@ -15,7 +15,7 @@ let ebay_website = "https://www.ebay.ca/sch/i.html?_from=R40&_trksid=p2380057.m5
 let searchItem = "apple+watch+se" //fix it later
 const puppeteer = require('puppeteer');
 async function scrape(url) {
-    const browser = await puppeteer.launch({ headless: false });
+    const browser = await puppeteer.launch({ headless: true });
     const page = await browser.newPage();
     await page.goto(url);
 
@@ -61,7 +61,7 @@ async function scrape(url) {
         return articles
 
     });
-    //await browser.close();
+    await browser.close();
     //console.log("end");
     return result;
 

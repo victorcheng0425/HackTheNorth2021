@@ -52,9 +52,14 @@ let wallmart_scraper = async(keyword) => {
     console.log("end wallmart scraping.");
     await browser.close();
     return productNames;
+
 };
 
-wallmart_scraper('T-Shirt').then((value => {
-        console.log(value);
-    }
-));
+// wallmart_scraper('T-Shirt').then((value => {
+//         console.log(value);
+//     }
+// ));
+
+module.exports = {
+    wallmart_scraper
+}

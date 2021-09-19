@@ -10,7 +10,6 @@
   "dependencies": {
     "dom-parser": "^0.1.6",
     "jsdom": "^17.0.0",
-    "express": "^4.17.1",
     "puppeteer": "^10.2.0",
     "xhr2": "^0.2.1",
     "xmldom": "^0.6.0",
