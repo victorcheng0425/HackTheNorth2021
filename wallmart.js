@@ -2,7 +2,7 @@ const puppeteer = require('puppeteer')
 function praseToPrice(string) {
     //console.log(string);
     string = string.split(' ');
-    //console.log(string);
+    //console.log(string);;
     // console.log(typeof(string));
     for(let i =0; i < string.length; i++) {
         if(string[i][0] === '$') {
